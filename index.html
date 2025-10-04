@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MuDi Agency - Agência Digital Inovadora</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <h2>MuDi Agency</h2>
+            </div>
+            <div class="loading-spinner">
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+            </div>
+            <p class="loading-text">Carregando experiência...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>MuDi Agency</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#team">Equipe</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Transformamos</span>
+                    <span class="title-line">Ideias em</span>
+                    <span class="title-line highlight">Experiências Digitais</span>
+                </h1>
+                <p class="hero-description">
+                    Somos uma agência digital especializada em criar soluções inovadoras 
+                    que conectam marcas ao futuro através de tecnologia de ponta.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn-primary">Nossos Projetos</a>
+                    <a href="https://wa.link/xw99ud" class="btn-secondary" target="_blank" rel="noopener">Fale Conosco</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-3d">
+            <canvas id="hero-canvas"></canvas>
+            <div class="hero-mockup">
+                <img src="assets/mockups/laptop-mockup.png" alt="Mockup da plataforma" loading="lazy">
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Testimonials (depoimentos) -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="testimonials">
+                <!-- Depoimentos removidos conforme solicitado -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Sobre a MuDi Agency</h2>
+                    <p class="section-description">
+                        Nascemos da paixão por tecnologia e design. Nossa missão é criar 
+                        experiências digitais que não apenas impressionam, mas transformam 
+                        a forma como as pessoas interagem com as marcas.
+                    </p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>50+</h3>
+                            <p>Projetos Entregues</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>5+</h3>
+                            <p>Anos de Experiência</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>100%</h3>
+                            <p>Clientes Satisfeitos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-3d">
+                    <canvas id="about-canvas"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team-section">
+        <div class="container">
+            <h2 class="section-title">Nossa Equipe</h2>
+            <p class="section-subtitle">Conheça os fundadores da MuDi Agency</p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <div class="avatar-placeholder">D</div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Diego Souza</h3>
+                        <p class="member-role">Co-Fundador & CTO</p>
+                        <p class="member-description">
+                            Especialista em desenvolvimento full-stack com mais de 8 anos de experiência. 
+                            Apaixonado por tecnologias emergentes e arquiteturas escaláveis, Diego lidera 
+                            nossa equipe técnica na criação de soluções inovadoras.
+                        </p>
+                        <div class="member-skills">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Cloud</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <div class="avatar-placeholder">M</div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Murilo Félix</h3>
+                        <p class="member-role">Co-Fundador & CEO</p>
+                        <p class="member-description">
+                            Visionário em estratégia digital e gestão de projetos com foco em resultados. 
+                            Murilo combina expertise em negócios com conhecimento técnico para entregar 
+                            soluções que realmente impactam o crescimento dos clientes.
+                        </p>
+                        <div class="member-skills">
+                            <span class="skill-tag">Strategy</span>
+                            <span class="skill-tag">UX/UI</span>
+                            <span class="skill-tag">Marketing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title centered">Nossos Serviços</h2>
+            <p class="section-description centered">
+                Oferecemos soluções completas para transformar sua presença digital
+            </p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <canvas class="service-canvas" data-service="web"></canvas>
+                    </div>
+                    <h3>Desenvolvimento Web</h3>
+                    <p>Sites e aplicações web responsivas, rápidas e otimizadas para conversão.</p>
+                    <ul>
+                        <li>Sites Institucionais</li>
+                        <li>E-commerce</li>
+                        <li>Aplicações Web</li>
+                        <li>PWAs</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <canvas class="service-canvas" data-service="ai"></canvas>
+                    </div>
+                    <h3>Design com IA</h3>
+                    <p>Criação de identidades visuais e interfaces utilizando inteligência artificial.</p>
+                    <ul>
+                        <li>Logotipos Inteligentes</li>
+                        <li>UI/UX Design</li>
+                        <li>Branding Digital</li>
+                        <li>Automação Visual</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <canvas class="service-canvas" data-service="3d"></canvas>
+                    </div>
+                    <h3>Experiências 3D</h3>
+                    <p>Ambientes tridimensionais interativos que elevam a experiência do usuário.</p>
+                    <ul>
+                        <li>Visualizações 3D</li>
+                        <li>Realidade Virtual</li>
+                        <li>Animações 3D</li>
+                        <li>Configuradores</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title centered">Portfólio</h2>
+            <p class="section-description centered">
+                Alguns dos nossos trabalhos mais recentes
+            </p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item variant-1">
+                    <div name="Video 1" class="interactive-card framer-GGxQI framer-mYTBq framer-j5j6e framer-Cvm8Q framer-ec0td framer-1oarqih framer-v-1oarqih" data-framer-name="Variant 1" style="background-color: rgb(26, 66, 40); width: 100%; border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px, rgba(0, 0, 0, 0.22) 0px 0.602187px 1.56569px -0.916667px, rgba(0, 0, 0, 0.21) 0px 2.28853px 5.95019px -1.83333px, rgba(0, 0, 0, 0.18) 0px 10px 26px -2.75px; opacity: 1;">
+                        <div class="framer-4wlppc" style="border-radius: 8px; opacity: 1;">
+                            <div class="framer-k0xroi-container" style="opacity: 1; position:relative;">
+                                <vsc-controller class="vsc-controller" style="top: 0px; left: 0px; position: absolute !important; z-index: 9999999 !important;"></vsc-controller>
+                                <video src="2.mp4" loop preload="auto" playsinline style="cursor: auto; width: 100%; height: 260px; border-radius: 8px; display: block; object-fit: cover; background-color: rgba(0, 0, 0, 0); object-position: 50% 50%;" autoplay muted></video>
+                            </div>
+                        </div>
+                        <div class="framer-73ss39" style="opacity: 1; padding: 12px 14px;">
+                            <div class="framer-cqwsi3" data-framer-component-type="RichTextContainer" style="opacity: 1;">
+                                <h3 style="color: #e5fdac; margin:0; font-size:1.05rem;">Film</h3>
+                            </div>
+                            <div class="framer-1oygqks" data-framer-component-type="RichTextContainer" style="opacity: 1;">
+                                <p style="color: #e5fdac; text-align:right; margin:0;">13 categories</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item variant-2">
+                    <div name="Video 2" class="interactive-card framer-GGxQI framer-mYTBq framer-j5j6e framer-Cvm8Q framer-ec0td framer-1oarqih framer-v-1oarqih" data-framer-name="Variant 2" style="background-color: rgb(18, 50, 80); width: 100%; border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px, rgba(0, 0, 0, 0.22) 0px 0.602187px 1.56569px -0.916667px, rgba(0, 0, 0, 0.21) 0px 2.28853px 5.95019px -1.83333px, rgba(0, 0, 0, 0.18) 0px 10px 26px -2.75px; opacity: 1;">
+                        <div class="framer-4wlppc" style="border-radius: 8px; opacity: 1;">
+                            <div class="framer-k0xroi-container" style="opacity: 1; position:relative;">
+                                <vsc-controller class="vsc-controller" style="top: 0px; left: 0px; position: absolute !important; z-index: 9999999 !important;"></vsc-controller>
+                                <video src="1.1.mp4" loop preload="auto" playsinline style="cursor: auto; width: 100%; height: 260px; border-radius: 8px; display: block; object-fit: cover; background-color: rgba(0, 0, 0, 0); object-position: 50% 50%;" autoplay muted></video>
+                            </div>
+                        </div>
+                        <div class="framer-73ss39" style="opacity: 1; padding: 12px 14px;">
+                            <div class="framer-cqwsi3" data-framer-component-type="RichTextContainer" style="opacity: 1;">
+                                <h3 style="color: #e5fdac; margin:0; font-size:1.05rem;">Showreel</h3>
+                            </div>
+                            <div class="framer-1oygqks" data-framer-component-type="RichTextContainer" style="opacity: 1;">
+                                <p style="color: #e5fdac; text-align:right; margin:0;">8 categories</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item variant-3">
+                    <div name="Video 3" class="interactive-card framer-GGxQI framer-mYTBq framer-j5j6e framer-Cvm8Q framer-ec0td framer-1oarqih framer-v-1oarqih" data-framer-name="Variant 3" style="background-color: rgb(40, 30, 60); width: 100%; border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px, rgba(0, 0, 0, 0.22) 0px 0.602187px 1.56569px -0.916667px, rgba(0, 0, 0, 0.21) 0px 2.28853px 5.95019px -1.83333px, rgba(0, 0, 0, 0.18) 0px 10px 26px -2.75px; opacity: 1;">
+                        <div class="framer-4wlppc" style="border-radius: 8px; opacity: 1;">
+                            <div class="framer-k0xroi-container" style="opacity: 1; position:relative;">
+                                <vsc-controller class="vsc-controller" style="top: 0px; left: 0px; position: absolute !important; z-index: 9999999 !important;"></vsc-controller>
+                                <video src="1.2.mp4" loop preload="auto" playsinline style="cursor: auto; width: 100%; height: 260px; border-radius: 8px; display: block; object-fit: cover; background-color: rgba(0, 0, 0, 0); object-position: 50% 50%;" autoplay muted></video>
+                            </div>
+                        </div>
+                        <div class="framer-73ss39" style="opacity: 1; padding: 12px 14px;">
+                            <div class="framer-cqwsi3" data-framer-component-type="RichTextContainer" style="opacity: 1;">
+                                <h3 style="color: #e5fdac; margin:0; font-size:1.05rem;">Cinematic</h3>
+                            </div>
+                            <div class="framer-1oygqks" data-framer-component-type="RichTextContainer" style="opacity: 1;">
+                                <p style="color: #e5fdac; text-align:right; margin:0;">5 categories</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-bg">
+            <canvas id="contact-canvas"></canvas>
+        </div>
+        <div class="container contact-content">
+            <div class="contact-text">
+                <h2 class="section-title">Vamos Criar Algo Incrível Juntos</h2>
+                <p class="section-description">
+                    Pronto para transformar sua ideia em realidade? 
+                    Entre em contato e vamos discutir seu próximo projeto.
+                </p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h4>Email</h4>
+                        <p>contato@mudi.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Telefone</h4>
+                        <p>+55 (44) 8439-3232</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Localização</h4>
+                        <p>Maringá-PR, Brasil</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Seu email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Assunto" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Sua mensagem" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary full-width">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>MuDi Agency</h3>
+                    <p>Transformando ideias em experiências digitais</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Serviços</h4>
+                        <ul>
+                            <li><a href="#">Desenvolvimento Web</a></li>
+                            <li><a href="#">Design com IA</a></li>
+                            <li><a href="#">Experiências 3D</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Empresa</h4>
+                        <ul>
+                            <li><a href="#">Sobre</a></li>
+                            <li><a href="#">Portfólio</a></li>
+                            <li><a href="#">Contato</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Social</h4>
+                        <ul>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">GitHub</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MuDi Agency. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Media Modal for full preview -->
+    <div class="media-modal" id="media-modal" aria-hidden="true">
+        <div class="media-modal-inner">
+            <button class="media-modal-close" id="media-modal-close" aria-label="Fechar">×</button>
+            <div class="media-modal-body" id="media-modal-body"></div>
+        </div>
+    </div>
+
+    <!-- WhatsApp floating CTA (replace data-chat-url via backend or set window.__WHATSAPP_URL) -->
+    <a id="whatsapp-float" class="whatsapp-float" href="https://wa.link/xw99ud" data-chat-url="https://wa.link/xw99ud" aria-label="Conversar pelo WhatsApp">
+        <span class="whatsapp-icon" aria-hidden="true">
+            <!-- Official WhatsApp SVG icon -->
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                    <linearGradient id="wa-green" x1="0" y1="0" x2="0" y2="32" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#43e97b"/>
+                        <stop offset="1" stop-color="#38f9d7"/>
+                    </linearGradient>
+                </defs>
+                <circle cx="16" cy="16" r="16" fill="url(#wa-green)"/>
+                <path d="M24.5 7.5A10.5 10.5 0 0 0 7.5 24.5l-1.1 4.1 4.2-1.1A10.5 10.5 0 1 0 24.5 7.5ZM16 26.2a9.8 9.8 0 0 1-5-1.4l-.36-.2-2.5.65.67-2.44-.23-.38A9.7 9.7 0 1 1 16 26.2Zm5.4-7.2c-.3-.15-1.77-.87-2.05-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.95 1.17-.17.2-.34.22-.64.07-.3-.15-1.27-.47-2.42-1.49-.9-.8-1.5-1.78-1.68-2.08-.18-.3-.02-.46.14-.61.14-.13.3-.34.44-.51.15-.17.2-.3.3-.5.1-.2 0-.37-.02-.52-.02-.15-.68-1.64-.93-2.25-.24-.6-.48-.5-.68-.51-.17-.01-.37-.01-.57-.01s-.52.07-.8.37c-.28.3-1.06 1.04-1.06 2.52s1.09 2.92 1.24 3.12c.15.2 2.14 3.3 5.18 4.62 3.04 1.33 3.04.89 3.59.84.55-.05 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.08-.14-.28-.2-.58-.35Z" fill="#fff"/>
+            </svg>
+        </span>
+        <span class="whatsapp-cta">Vamos conversar</span>
+    </a>
+    <div id="whatsapp-badge" class="whatsapp-badge" data-start="9" data-end="18" data-text="Atendimento: 9h–18h" aria-hidden="true"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
