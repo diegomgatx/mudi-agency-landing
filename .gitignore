@@ -1,0 +1,24 @@
+node_modules/
+.DS_Store
+dist/
+build/
+.env
+.env.local
+/.vercel
+*.log
+/.cache
+Thumbs.db
+__pycache__/
+*.sqlite3
+*.pyc
+*.pyo
+.idea/
+.vscode/
+/.sass-cache
+/.parcel-cache
+/.next
+*.swp
+/.history
+
+# Ignore large media if you plan to manage via LFS separately
+*.mp4
