@@ -1,0 +1,11 @@
+{
+  "name": "MuDi Agency",
+  "short_name": "MuDi",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#667eea",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "64x64", "type": "image/svg+xml" }
+  ]
+}
