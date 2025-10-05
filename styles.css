@@ -359,8 +359,14 @@ body {
 /* Social icons in footer */
 .social-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; }
 .social-list li a { color: #bdbdbd; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
-.social-list li a .social-icon { width: 18px; height: 18px; display: inline-block; vertical-align: middle; }
+.social-list li a .social-icon { width: 22px; height: 22px; display: inline-block; vertical-align: middle; border-radius: 6px; padding: 3px; }
+.social-list li a.social-whatsapp .social-icon { background: #25D366; padding: 3px; border-radius: 6px; }
 .social-list li a:hover { color: #e6e6ff; }
+
+/* Color backgrounds for each icon to match the Flaticon look */
+.social-list li a img[alt*="LinkedIn"] { background: #0A66C2; }
+.social-list li a img[alt*="Instagram"] { background: linear-gradient(45deg, #feda75, #d62976, #962fbf); }
+
 
 @media (min-width: 900px) {
     .social-list { flex-direction: column; }

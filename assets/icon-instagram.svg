@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
-  <rect width="24" height="24" rx="4" fill="#E1306C"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <defs>
+    <linearGradient id="ig" x1="0" x2="1">
+      <stop offset="0" stop-color="#feda75"/>
+      <stop offset="0.5" stop-color="#d62976"/>
+      <stop offset="1" stop-color="#962fbf"/>
+    </linearGradient>
+  </defs>
+  <rect width="24" height="24" rx="4" fill="url(#ig)"/>
   <path d="M12 7.2a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6zm0 7.92a3.12 3.12 0 1 1 0-6.24 3.12 3.12 0 0 1 0 6.24zM16.56 7.08a1.12 1.12 0 1 1 0-2.24 1.12 1.12 0 0 1 0 2.24z" fill="#fff"/>
 </svg>
