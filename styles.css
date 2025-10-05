@@ -329,6 +329,33 @@ body {
     background-clip: text;
 }
 
+/* Ajustes para os novos SVGs de logo */
+.nav-logo img {
+    width: 42px;
+    height: 42px;
+    display: block;
+}
+
+.loading-logo img {
+    width: 96px;
+    height: 96px;
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+
+.footer-logo img {
+    width: 84px;
+    height: 84px;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 700px) {
+    .nav-logo img { width: 36px; height: 36px; }
+    .loading-logo img { width: 72px; height: 72px; }
+    .footer-logo img { width: 64px; height: 64px; }
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
