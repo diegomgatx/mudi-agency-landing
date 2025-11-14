@@ -1,6 +1,6 @@
 ## Objetivo rápido
 
-Este repositório é uma landing page estática chamada "NovaPixel". A maior parte da lógica visual está em `script.js` usando Three.js para várias cenas 3D, GSAP + ScrollTrigger para animações, e manipulação direta do DOM em `index.html`. Use este ficheiro para priorizar mudanças que preservem a performance do canvas e as convenções existentes.
+Este repositório é uma landing page estática chamada "MuDi Agency". A maior parte da lógica visual está em `script.js` usando Three.js para várias cenas 3D, GSAP + ScrollTrigger para animações, e manipulação direta do DOM em `index.html`. Use este ficheiro para priorizar mudanças que preservem a performance do canvas e as convenções existentes.
 
 ## Arquitetura — visão geral
 
