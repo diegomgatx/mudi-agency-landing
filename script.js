@@ -423,70 +423,99 @@ function initHeroScene() {
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
-    
     renderer.setSize(canvas.clientWidth, canvas.clientHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    
-    // Create floating geometric shapes
-    const geometry1 = new THREE.IcosahedronGeometry(1, 0);
-    const geometry2 = new THREE.OctahedronGeometry(0.8);
-    const geometry3 = new THREE.TetrahedronGeometry(0.6);
-    
-    const material1 = new THREE.MeshBasicMaterial({ 
-        color: 0x667eea, 
-        wireframe: true,
+
+    // Iluminação
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
+    scene.add(ambientLight);
+    const pointLight = new THREE.PointLight(0xff00ff, 1.5, 100);
+    pointLight.position.set(5, 5, 5);
+    scene.add(pointLight);
+    const pointLight2 = new THREE.PointLight(0xffffff, 0.5, 100);
+    pointLight2.position.set(-5, -5, 2);
+    scene.add(pointLight2);
+
+    // Grupo da rede neural
+    const neuralGroup = new THREE.Group();
+
+    // Parâmetros
+    const PARTICLE_COUNT = 400;
+    const SPHERE_RADIUS = 2.5;
+    const CONNECTION_DISTANCE = 0.7;
+
+    // Nós (partículas)
+    const particlesGeometry = new THREE.BufferGeometry();
+    const positions = [];
+    const particleVertices = [];
+    for (let i = 0; i < PARTICLE_COUNT; i++) {
+        const theta = Math.random() * 2 * Math.PI;
+        const phi = Math.acos((2 * Math.random()) - 1);
+        const x = SPHERE_RADIUS * Math.sin(phi) * Math.cos(theta);
+        const y = SPHERE_RADIUS * Math.sin(phi) * Math.sin(theta);
+        const z = SPHERE_RADIUS * Math.cos(phi);
+        positions.push(x, y, z);
+        particleVertices.push(new THREE.Vector3(x, y, z));
+    }
+    particlesGeometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+    const particlesMaterial = new THREE.PointsMaterial({
+        color: 0xffffff,
+        size: 0.03,
         transparent: true,
         opacity: 0.8
     });
-    const material2 = new THREE.MeshBasicMaterial({ 
-        color: 0x764ba2, 
-        wireframe: true,
+    const particles = new THREE.Points(particlesGeometry, particlesMaterial);
+    neuralGroup.add(particles);
+
+    // Conexões (linhas)
+    const linesGeometry = new THREE.BufferGeometry();
+    const linePositions = [];
+    for (let i = 0; i < PARTICLE_COUNT; i++) {
+        for (let j = i + 1; j < PARTICLE_COUNT; j++) {
+            const p1 = particleVertices[i];
+            const p2 = particleVertices[j];
+            const distance = p1.distanceTo(p2);
+            if (distance < CONNECTION_DISTANCE) {
+                linePositions.push(p1.x, p1.y, p1.z);
+                linePositions.push(p2.x, p2.y, p2.z);
+            }
+        }
+    }
+    linesGeometry.setAttribute('position', new THREE.Float32BufferAttribute(linePositions, 3));
+    const linesMaterial = new THREE.LineBasicMaterial({
+        color: 0xff00ff,
         transparent: true,
-        opacity: 0.6
+        opacity: 0.3
     });
-    const material3 = new THREE.MeshBasicMaterial({ 
-        color: 0x667eea, 
-        wireframe: true,
-        transparent: true,
-        opacity: 0.4
-    });
-    
-    const mesh1 = new THREE.Mesh(geometry1, material1);
-    const mesh2 = new THREE.Mesh(geometry2, material2);
-    const mesh3 = new THREE.Mesh(geometry3, material3);
-    
-    mesh1.position.set(0, 0, 0);
-    mesh2.position.set(-2, 1, -1);
-    mesh3.position.set(2, -1, -0.5);
-    
-    scene.add(mesh1, mesh2, mesh3);
-    
+    const lines = new THREE.LineSegments(linesGeometry, linesMaterial);
+    neuralGroup.add(lines);
+
+    scene.add(neuralGroup);
     camera.position.z = 5;
-    
-    // Store references
-    scenes.hero = scene;
-    renderers.hero = renderer;
-    cameras.hero = camera;
-    meshes.hero = [mesh1, mesh2, mesh3];
-    
-    // Animation loop
+
+    // Responsividade
+    function handleResize() {
+        camera.aspect = canvas.clientWidth / canvas.clientHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+    }
+    window.addEventListener('resize', handleResize);
+
+    // Animação baseada no scroll
+    let scrollY = window.scrollY;
+    function handleScroll() {
+        scrollY = window.scrollY;
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    const clock = new THREE.Clock();
     function animate() {
         requestAnimationFrame(animate);
-        
-        const time = Date.now() * 0.001;
-        
-        mesh1.rotation.x += 0.005;
-        mesh1.rotation.y += 0.008;
-        mesh1.position.y = Math.sin(time * 0.5) * 0.2;
-        
-        mesh2.rotation.x -= 0.004;
-        mesh2.rotation.z += 0.006;
-        mesh2.position.x = -2 + Math.cos(time * 0.3) * 0.3;
-        
-        mesh3.rotation.y -= 0.007;
-        mesh3.rotation.z += 0.005;
-        mesh3.position.z = -0.5 + Math.sin(time * 0.4) * 0.2;
-        
+        const elapsedTime = clock.getElapsedTime();
+        neuralGroup.rotation.y = elapsedTime * 0.1;
+        const scrollRotation = scrollY * 0.001;
+        neuralGroup.rotation.x = scrollRotation;
+        pointLight.intensity = 1.5 + Math.sin(elapsedTime * 2) * 0.5;
         renderer.render(scene, camera);
     }
     animate();
